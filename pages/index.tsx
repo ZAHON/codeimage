@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { PackgeExport } from 'tabler-icons-react';
 
 import { ThemeChanger } from '@/components/ThemeChanger/ThemeChanger';
-import { Button } from '@/components/UI/.';
+import { Button, ActionIcon } from '@/components/UI/.';
 
 const Home: NextPage = () => (
   <>
@@ -28,6 +28,11 @@ const Home: NextPage = () => (
       <Button icon={<PackgeExport size={16} />} onClick={() => alert('Clicked Button')}>
         Button
       </Button>
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <ActionIcon ariaLabel="Test" onClick={() => alert('Clicked Action Icon')}>
+        <PackgeExport size={18} focusable="false" aria-hidden="true" />
+      </ActionIcon>
     </div>
   </>
 );
