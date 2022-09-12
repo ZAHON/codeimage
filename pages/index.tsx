@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import { ThemeChanger } from '@/components/ThemeChanger/ThemeChanger';
-import { Divider } from '@/components/UI/.';
+import { Divider, Stack } from '@/components/UI/.';
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +29,31 @@ const Home: NextPage = () => {
           consequuntur, perferendis incidunt nihil laudantium exercitationem itaque velit dicta
           voluptates id ipsum non quod dolore vitae voluptatem! Fuga, ducimus.
         </p>
+      </div>
+      <hr />
+      <div
+        style={{
+          width: '600px',
+          height: '600px',
+          padding: '1rem',
+          margin: '1rem',
+          border: '1px solid var(--color-border)',
+        }}
+      >
+        <Stack direction="row" justify="flex-start" align="flex-start" spacing="10px">
+          <div
+            style={{ width: '100px', height: '100px', border: '1px solid var(--color-border)' }}
+          ></div>
+          <div
+            style={{ width: '100px', height: '100px', border: '1px solid var(--color-border)' }}
+          ></div>
+          <div
+            style={{ width: '100px', height: '100px', border: '1px solid var(--color-border)' }}
+          ></div>
+          <div
+            style={{ width: '50px', height: '150px', border: '1px solid var(--color-border)' }}
+          ></div>
+        </Stack>
       </div>
     </>
   );

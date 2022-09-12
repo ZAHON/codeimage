@@ -6,5 +6,6 @@ export { Select } from './Select/Select';
 export { SelectItem } from './Select/SelectItem/SelectItem';
 export { SelectGroup } from './Select/SelectGroup/SelectGroup';
 export { SelectSeparator } from './Select/SelectSeparator/SelectSeparator';
+export { Stack } from './Stack/Stack';
 export { Switch } from './Switch/Switch';
 export { Tooltip } from './Tooltip/Tooltip';
