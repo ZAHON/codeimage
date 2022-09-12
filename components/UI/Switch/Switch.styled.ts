@@ -14,12 +14,15 @@ export const SwitchRoot = styled(Root)`
   cursor: pointer;
   transition: background-color 0.25s ease;
 
-  &[data-state='checked']:hover {
+  &[data-state='checked']:not(&[data-disabled]) {
+    background-color: var(--color-primary);
+  }
+
+  &[data-state='checked']:hover:not(&[data-disabled]) {
     background-color: var(--color-blue-700);
   }
 
-  &[data-state='unchecked']:active > span {
-    transform: translateX(calc(var(--switch-width) / 7.5));
+  &:active > span {
     width: calc(var(--switch-height) * 0.7 + (var(--switch-width) / 10));
   }
 
@@ -30,16 +33,23 @@ export const SwitchRoot = styled(Root)`
           var(--switch-height) * 0.7
       )
     );
-    width: calc(var(--switch-height) * 0.7 + (var(--switch-width) / 10));
+  }
+
+  &[data-state='unchecked']:active > span {
+    transform: translateX(calc(var(--switch-width) / 7.5));
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+  }
+
+  &[data-disabled][data-state='checked']:hover {
+    background-color: var(--color-gray-400);
   }
 
   &:focus-visible {
     outline-offset: 2px;
     outline: 2px solid var(--color-primary);
-  }
-
-  &[data-state='checked'] {
-    background-color: var(--color-primary);
   }
 `;
 
@@ -58,5 +68,13 @@ export const SwitchThumb = styled(Thumb)`
     transform: translateX(
       calc(var(--switch-width) - var(--switch-width) / 15 - var(--switch-height) * 0.7)
     );
+  }
+
+  &[data-disabled][data-state='unchecked'] {
+    background-color: var(--color-gray-400);
+  }
+
+  &[data-disabled][data-state='checked'] {
+    background-color: var(--color-gray-50);
   }
 `;
