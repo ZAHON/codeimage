@@ -13,6 +13,7 @@ import {
   SelectItem,
   SelectGroup,
   SelectSeparator,
+  Label,
 } from '@/components/UI/.';
 
 const Home: NextPage = () => {
@@ -42,7 +43,8 @@ const Home: NextPage = () => {
         <Button icon={<PackgeExport size={16} />} onClick={() => alert('Clicked Button')}>
           Button
         </Button>
-        <Select id="test-select" value={selectValue} onChange={setSelectValue}>
+        <Label htmlFor="test12345">Test Select</Label>
+        <Select id="test12345" value={selectValue} onChange={setSelectValue}>
           <SelectGroup label="Test 1">
             <SelectItem value="0">Value 0</SelectItem>
             <SelectItem disabled value="1">
@@ -80,7 +82,6 @@ const Home: NextPage = () => {
           <SelectItem value="29">Value 29</SelectItem>
           <SelectItem value="30">Value 30</SelectItem>
         </Select>
-        <label htmlFor="test-select">Test Select</label>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Tooltip content="Lorem ipsum dolor sit amet" side="bottom" align="center">
