@@ -14,10 +14,12 @@ import {
   SelectGroup,
   SelectSeparator,
   Label,
+  Switch,
 } from '@/components/UI/.';
 
 const Home: NextPage = () => {
   const [selectValue, setSelectValue] = useState('0');
+  const [switchValue, setSwitchValue] = useState(false);
 
   return (
     <>
@@ -82,6 +84,8 @@ const Home: NextPage = () => {
           <SelectItem value="29">Value 29</SelectItem>
           <SelectItem value="30">Value 30</SelectItem>
         </Select>
+        <Label htmlFor="test-switch">Test Switch</Label>
+        <Switch id="test-switch" checked={switchValue} onChange={setSwitchValue} />
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Tooltip content="Lorem ipsum dolor sit amet" side="bottom" align="center">
