@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import { ThemeChanger } from '@/components/ThemeChanger/ThemeChanger';
-import { Divider, Stack } from '@/components/UI/.';
+import { Divider, Spinner } from '@/components/UI/.';
 
 const Home: NextPage = () => {
   return (
@@ -40,20 +40,7 @@ const Home: NextPage = () => {
           border: '1px solid var(--color-border)',
         }}
       >
-        <Stack direction="row" justify="flex-start" align="flex-start" spacing="10px">
-          <div
-            style={{ width: '100px', height: '100px', border: '1px solid var(--color-border)' }}
-          ></div>
-          <div
-            style={{ width: '100px', height: '100px', border: '1px solid var(--color-border)' }}
-          ></div>
-          <div
-            style={{ width: '100px', height: '100px', border: '1px solid var(--color-border)' }}
-          ></div>
-          <div
-            style={{ width: '50px', height: '150px', border: '1px solid var(--color-border)' }}
-          ></div>
-        </Stack>
+        <Spinner />
       </div>
     </>
   );
