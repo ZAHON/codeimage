@@ -3,10 +3,10 @@ import Head from 'next/head';
 
 import { useState } from 'react';
 import { ThemeChanger } from '@/components/ThemeChanger/ThemeChanger';
-import { Collapse, Switch } from '@/components/UI/.';
+import { Stack, Slider, Label, Switch } from '@/components/UI/.';
 
 const Home: NextPage = () => {
-  const [isCollapseOpen, setIsCollapseOpen] = useState(true);
+  const [value, setValue] = useState(20);
 
   return (
     <>
@@ -16,11 +16,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ThemeChanger />
-      <Switch id="test" checked={isCollapseOpen} onChange={setIsCollapseOpen} />
-      <Collapse isOpened={isCollapseOpen}>
-        <div style={{ height: '500px', width: '100%', backgroundColor: 'var(--color-primary)' }} />
-      </Collapse>
+      <div style={{ padding: '10px' }}>
+        <Stack>
+          <ThemeChanger />
+          <Label htmlFor="test-slider">Test Slider</Label>
+          <Slider id="test-slider" value={value} onChange={setValue} ariaLabel="..." />
+          <Switch disabled id="..." checked={true} onChange={() => console.log()} />
+        </Stack>
+      </div>
     </>
   );
 };
