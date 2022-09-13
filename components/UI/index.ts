@@ -3,6 +3,7 @@ export { Button } from './Button/Button';
 export { Collapse } from './Collapse/Collapse';
 export { Divider } from './Divider/Divider';
 export { Label } from './Label/Label';
+export { ScrollArea } from './ScrollArea/ScrollArea';
 export { Select } from './Select/Select';
 export { SelectItem } from './Select/SelectItem/SelectItem';
 export { SelectGroup } from './Select/SelectGroup/SelectGroup';

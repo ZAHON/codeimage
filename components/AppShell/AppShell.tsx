@@ -13,6 +13,7 @@ import { ActionIcon } from '@/components/UI/.';
 
 import { Header } from '@/components/Header/Header';
 import { Menu } from '@/components/Menu/Menu';
+import { Viewport } from '@/components/Viewport/Viewport';
 
 export const AppShell = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -37,7 +38,9 @@ export const AppShell = () => {
         <AppShellNavbar isOpen={isNavbarOpen}>
           <Menu />
         </AppShellNavbar>
-        <AppShellMain />
+        <AppShellMain>
+          <Viewport />
+        </AppShellMain>
       </AppShellContent>
     </AppShellRoot>
   );

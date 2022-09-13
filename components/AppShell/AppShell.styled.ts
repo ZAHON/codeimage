@@ -49,6 +49,7 @@ export const AppShellContent = styled.div`
 `;
 
 export const AppShellNavbar = styled.div<{ isOpen: boolean }>`
+  z-index: 1;
   position: fixed;
   top: 60px;
   left: 0;
@@ -68,4 +69,5 @@ export const AppShellNavbar = styled.div<{ isOpen: boolean }>`
 
 export const AppShellMain = styled.div`
   flex: 1;
+  overflow: hidden;
 `;
