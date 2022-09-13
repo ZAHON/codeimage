@@ -11,6 +11,7 @@ import {
 import { Settings } from 'tabler-icons-react';
 import { ActionIcon } from '@/components/UI/.';
 
+import { Header } from '@/components/Header/Header';
 import { Menu } from '@/components/Menu/Menu';
 
 export const AppShell = () => {
@@ -30,6 +31,7 @@ export const AppShell = () => {
             <Settings size={18} />
           </ActionIcon>
         </AppShellNavbarToggler>
+        <Header />
       </AppShellHeader>
       <AppShellContent>
         <AppShellNavbar isOpen={isNavbarOpen}>

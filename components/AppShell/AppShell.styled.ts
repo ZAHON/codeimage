@@ -8,6 +8,7 @@ export const AppShellHeader = styled.div`
   height: 60px;
   padding: 0 10px;
   display: flex;
+  column-gap: 10px;
   align-items: center;
   border-bottom: 1px solid var(--color-border);
 `;
@@ -24,8 +25,9 @@ export const AppShellLogo = styled.div`
   @media screen and (min-width: 650px) {
     position: relative;
     display: flex;
-    height: 60px;
+    height: 59px;
     width: 270px;
+    padding-right: 10px;
     justify-content: center;
     align-items: center;
 
