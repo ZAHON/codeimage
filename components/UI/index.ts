@@ -1,5 +1,6 @@
 export { ActionIcon } from './ActionIcon/ActionIcon';
 export { Button } from './Button/Button';
+export { Collapse } from './Collapse/Collapse';
 export { Divider } from './Divider/Divider';
 export { Label } from './Label/Label';
 export { Select } from './Select/Select';
